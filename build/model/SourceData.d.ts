@@ -1,6 +1,7 @@
 import { Image } from './Image';
 import { Formula, FormulaInContent, ImageFormula } from './Formula';
 import { TableWithData, TableWithImage, TableInParagraph } from './Table';
+import Reference from './Reference';
 interface NameType {
     chineseName?: string;
     englishName?: string;
@@ -96,7 +97,7 @@ interface Content {
     preParagraphs: Array<Section>;
     chapters: Array<Section>;
 }
-interface SourceData {
+interface SourceDataWithoutReferences {
     title: {
         chineseName?: string;
         englishName?: string;
@@ -134,4 +135,10 @@ interface SourceData {
     table: Array<TableWithData | TableWithImage>;
     footnote: Array<Footnote>;
 }
-export { SourceData, Content, Section, Decorate, Paragraph, BaseParagraphWithDecorates, DecorateType, Quote, ListItem, ListType, Footnote, FootnoteInContent, ReferenceType, ContentReference, };
+interface SourceDataOfOldThesis extends SourceDataWithoutReferences {
+    allReferences: Array<Reference>;
+}
+interface SourceDataWithProcessedReferences extends SourceDataWithoutReferences {
+    reference: Array<BaseParagraphWithDecorates>;
+}
+export { SourceDataWithoutReferences, SourceDataOfOldThesis, SourceDataWithProcessedReferences, Content, Section, Decorate, Paragraph, BaseParagraphWithDecorates, DecorateType, Quote, ListItem, ListType, Footnote, FootnoteInContent, ReferenceType, ContentReference, };
