@@ -3,6 +3,7 @@
  */
 'use strict';
 exports.__esModule = true;
+exports.ImageSizeType = void 0;
 var ImageSizeType;
 (function (ImageSizeType) {
     ImageSizeType["default"] = "default";

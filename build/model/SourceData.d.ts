@@ -137,6 +137,8 @@ interface SourceDataWithoutReferences {
 }
 interface SourceDataOfOldThesis extends SourceDataWithoutReferences {
     allReferences: Array<Reference>;
+    generalReferences?: Array<Reference>;
+    references?: Array<Reference>;
 }
 interface SourceDataWithProcessedReferences extends SourceDataWithoutReferences {
     reference: Array<BaseParagraphWithDecorates>;
