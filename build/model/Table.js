@@ -3,6 +3,7 @@
  */
 'use strict';
 exports.__esModule = true;
+exports.TableType = void 0;
 var TableType;
 (function (TableType) {
     TableType["simpleTable"] = "simpleTable";

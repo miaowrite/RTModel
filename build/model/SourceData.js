@@ -3,6 +3,7 @@
  */
 'use strict';
 exports.__esModule = true;
+exports.ReferenceType = exports.ListType = exports.DecorateType = void 0;
 var DecorateType;
 (function (DecorateType) {
     DecorateType["bold"] = "bold";
