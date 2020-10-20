@@ -143,4 +143,4 @@ interface SourceDataOfOldThesis extends SourceDataWithoutReferences {
 interface SourceDataWithProcessedReferences extends SourceDataWithoutReferences {
     reference: Array<BaseParagraphWithDecorates>;
 }
-export { SourceDataWithoutReferences, SourceDataOfOldThesis, SourceDataWithProcessedReferences, Content, Section, Decorate, Paragraph, BaseParagraphWithDecorates, DecorateType, Quote, ListItem, ListType, Footnote, FootnoteInContent, ReferenceType, ContentReference, };
+export { SourceDataWithoutReferences, SourceDataOfOldThesis, SourceDataWithProcessedReferences, Content, Section, Decorate, Paragraph, BaseParagraph, BaseParagraphWithDecorates, DecorateType, Quote, ListItem, ListType, Footnote, FootnoteInContent, ReferenceType, ContentReference, };
