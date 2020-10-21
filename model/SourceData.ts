@@ -132,6 +132,7 @@ export {
   Section,
   Decorate,
   Paragraph,
+  BaseParagraph,
   BaseParagraphWithDecorates,
   DecorateType,
   Quote,
