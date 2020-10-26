@@ -120,8 +120,14 @@ interface SourceDataOfOldThesis extends SourceDataWithoutReferences {
   generalReferences?: Array<Reference>;
   references?: Array<Reference>;
 }
+
+interface ProcessedReferences extends BaseParagraphWithDecorates {
+  id: string;
+  citationContent?: BaseParagraphWithDecorates
+}
+
 interface SourceDataWithProcessedReferences extends SourceDataWithoutReferences {
-  reference: Array<BaseParagraphWithDecorates>
+  reference: Array<ProcessedReferences>
 }
 
 export {
@@ -142,4 +148,5 @@ export {
   FootnoteInContent,
   ReferenceType,
   ContentReference,
+  ProcessedReferences
 };

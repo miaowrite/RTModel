@@ -140,7 +140,11 @@ interface SourceDataOfOldThesis extends SourceDataWithoutReferences {
     generalReferences?: Array<Reference>;
     references?: Array<Reference>;
 }
-interface SourceDataWithProcessedReferences extends SourceDataWithoutReferences {
-    reference: Array<BaseParagraphWithDecorates>;
+interface ProcessedReferences extends BaseParagraphWithDecorates {
+    id: string;
+    citationContent?: BaseParagraphWithDecorates;
 }
-export { SourceDataWithoutReferences, SourceDataOfOldThesis, SourceDataWithProcessedReferences, Content, Section, Decorate, Paragraph, BaseParagraph, BaseParagraphWithDecorates, DecorateType, Quote, ListItem, ListType, Footnote, FootnoteInContent, ReferenceType, ContentReference, };
+interface SourceDataWithProcessedReferences extends SourceDataWithoutReferences {
+    reference: Array<ProcessedReferences>;
+}
+export { SourceDataWithoutReferences, SourceDataOfOldThesis, SourceDataWithProcessedReferences, Content, Section, Decorate, Paragraph, BaseParagraph, BaseParagraphWithDecorates, DecorateType, Quote, ListItem, ListType, Footnote, FootnoteInContent, ReferenceType, ContentReference, ProcessedReferences };
